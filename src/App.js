@@ -5,6 +5,8 @@ import About from './About.js';
 import Contact from './Contact.js';
 import Topics from './Topics.js';
 import Employee from './Employee.js';
+import Albums from './Albums.js';
+import Album from './Album.js';
 import {
   BrowserRouter as Router,
   Link,
@@ -23,6 +25,8 @@ class App extends Component {
       <Layout>
         <Switch>
           <Route path="/about" component={About} />
+          <Route path="/albums" component={Albums} />
+          <Route path="/album/:id" component={Album} />
           <Route path="/emp/:id" component={Employee} />
           <Route path="/topics" component={Topics}/>
           <Route path="/contact" component={Contact}/>

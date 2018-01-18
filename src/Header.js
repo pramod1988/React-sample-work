@@ -22,6 +22,11 @@ class Header extends React.Component {
 				      </NavLink>
 		            </li>
 		            <li className="nav-item">
+		              <NavLink className="nav-link" to="/albums" activeClassName="active" >
+				          Albums
+				        </NavLink>
+		            </li>
+		            <li className="nav-item">
 		              <NavLink className="nav-link" to="/about" activeClassName="active" >
 				          About
 				      </NavLink>

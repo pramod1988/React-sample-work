@@ -18,8 +18,9 @@ class Home extends React.Component {
   }
   
   componentDidMount() {
-    axios.get('http://dummy.restapiexample.com/api/v1/employees')
+    axios.get('https://jsonplaceholder.typicode.com/posts')
       .then(response => {
+            //console.log(response);
             setTimeout(() => this.setState({ loading: false }), 500);
             this.setState({ person: response.data });
       })
@@ -31,10 +32,10 @@ class Home extends React.Component {
 
 getListView(){
     return this.state.person.map((item,index) => {
-      if(item.employee_name!='')
+      if(item.title!='')
       {
          return( <div key={item.id} className="col-md-4">
-                  <h1 style={Style}><Link to={`/emp/${item.id}`}>{ item.employee_name }</Link></h1>
+                  <h1 style={Style}><Link to={`/emp/${item.id}`}>{ item.title }</Link></h1>
           </div>)
       }
     });
